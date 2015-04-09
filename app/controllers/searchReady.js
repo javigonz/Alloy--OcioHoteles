@@ -121,6 +121,8 @@ function createComboCountry(){
 							$.buttonDestiny.visible = 'true';
 							$.buttonDestiny.width = '70';
 							$.buttonDestiny.height = '45';
+							
+							createComboDestiny();
 						}
 			});
 											
@@ -294,7 +296,6 @@ function createComboDestiny(){
 		backgroundColor: '#CCCCCC'
     });
 	 
-	$.containerScroll.add(buttonSearch);
 	
 	$.buttonDestiny.addEventListener("click", function(event, type) {
         Titanium.API.info("CLICK EN BUSCAR");
@@ -305,7 +306,7 @@ function createComboDestiny(){
                     resulttable.deleteRow(i);
                 }
             }
-            auto_complete(search.value);
+            auto_complete($.comboDestiny.value);
         } else {
             $.containerScroll.remove(resulttable);
         }
