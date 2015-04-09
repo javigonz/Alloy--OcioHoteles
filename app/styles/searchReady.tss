@@ -39,6 +39,24 @@
 
 }
 
+".combo2[platform=android]": {
+    height: 45,
+    width: '80%',
+    borderColor: Alloy.CFG.BLUE1,
+    top: 0,
+    left: 0,
+    //paddingLeft: 5,
+    color: Alloy.CFG.BLACK,
+    borderWidth : '2px',
+    backgroundColor:'transparent',
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	16,
+		fontWeight: 'normal'
+	}
+
+}
+
 ".search_button[platform=android]": {
     height: 45,
     width: '90%',
@@ -51,6 +69,28 @@
 		fontWeight: 'normal'
 	},
 	bottom: 15
+
+}
+
+
+".containerDestiny[platform=android]": { 
+	width: '90%',
+	height: 45
+}
+
+
+".destiny_button[platform=android]": {
+    height: 45,
+    width: '70',
+    top: 0,
+    backgroundColor: Alloy.CFG.GREEN,
+    color: Alloy.CFG.WHITE,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	18,
+		fontWeight: 'normal'
+	},
+	right: 0
 
 }
 

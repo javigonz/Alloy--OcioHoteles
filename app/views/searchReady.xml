@@ -7,17 +7,23 @@
 			<!-- PAIS -->
 			<TextArea class="combo" id="comboCountry" platform="ios"  touchEnabled="true"  ></TextArea>
 			<View platform="android" class="combo" id="comboCountry" ></View>
+	
 			
-			<!-- DESTINO SÓLO SI EL PAÍS ES ESPAÑA -->
-			<TextArea class="combo" id="comboDestinySpain" platform="ios"  touchEnabled="true" ></TextArea>
-			<View platform="android" class="combo" id="comboDestinySpain" ></View>
+				<!-- DESTINO SÓLO SI EL PAÍS ES ESPAÑA -->
+				<TextArea class="combo" id="comboDestinySpain" platform="ios"  touchEnabled="true" ></TextArea>
+				<View platform="android" class="combo" id="comboDestinySpain" ></View>
+	
+		
+					<!-- ZONAS SÓLO SI EL PAÍS ES ESPAÑA -->
+					<TextArea class="combo" id="comboZonesSpain" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo" id="comboZonesSpain"></View>
+					
 			
-			<!-- DESTINO PARA EL RESTO DE PAÍSES -->
-			<TextField class="combo" id="comboDestiny" hintText="Elige el destino..."></TextField>
-			
-			<!-- ZONAS SÓLO SI EL PAÍS ES ESPAÑA -->
-			<TextArea class="combo" id="comboZonesSpain" platform="ios"  touchEnabled="true"  ></TextArea>
-			<View platform="android" class="combo" id="comboZonesSpain"></View>
+				<!-- DESTINO PARA EL RESTO DE PAÍSES -->
+				<View class="containerDestiny" id="containerDestiny">
+					<TextField class="combo2" id="comboDestiny" hintText="Elige el destino..."></TextField>
+					<Button class="destiny_button" id="buttonDestiny" title="Buscar" ></Button>
+				</View>
 
 									
 			<Button class="search_button" id="id_buttonLogin" title="L('text_13')" onClick="handler_initSearch"></Button>

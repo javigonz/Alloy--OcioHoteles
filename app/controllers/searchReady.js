@@ -32,6 +32,14 @@ function show(){
 	$.comboZonesSpain.width = '0';
 	$.comboZonesSpain.height = '0';
 	
+	$.comboDestiny.visible = 'false';
+	$.comboDestiny.width = '0';
+	$.comboDestiny.height = '0';
+	
+	$.buttonDestiny.visible = 'false';
+	$.buttonDestiny.width = '0';
+	$.buttonDestiny.height = '0';
+	
 	
 	
 	Ti.App.fireEvent('openLoading');
@@ -83,6 +91,14 @@ function createComboCountry(){
 						if (picker.getSelectedRow(0).id == '28') //Es España
 						{
 							loadDataDestinySpain();
+
+							$.comboDestiny.visible = 'false';
+							$.comboDestiny.width = '0';
+							$.comboDestiny.height = '0';
+							
+							$.buttonDestiny.visible = 'false';
+							$.buttonDestiny.width = '0';
+							$.buttonDestiny.height = '0';
 							
 							$.comboDestinySpain.visible = 'true';
 							$.comboDestinySpain.width = '90%';
@@ -93,9 +109,18 @@ function createComboCountry(){
 							$.comboDestinySpain.visible = 'false';
 							$.comboDestinySpain.width = '0';
 							$.comboDestinySpain.height = '0';
+							
 							$.comboZonesSpain.visible = 'false';
 							$.comboZonesSpain.width = '0';
 							$.comboZonesSpain.height = '0';
+							
+							$.comboDestiny.visible = 'true';
+							$.comboDestiny.width = '90%';
+							$.comboDestiny.height = '45';
+							
+							$.buttonDestiny.visible = 'true';
+							$.buttonDestiny.width = '70';
+							$.buttonDestiny.height = '45';
 						}
 			});
 											
@@ -260,23 +285,7 @@ function createComboZonesSpain(){
 ///////////////////////////////////////// CREA EL COMBO DE DESTINOS AUTOCOMPLETADO PARA EL RESTO DE PAÍSES MENOS ESPAÑA
 function createComboDestiny(){
 	
-	var search = Titanium.UI.createTextField({
- 		height : '40',
-        hintText : 'Autocompletado',
-        top : '0',
-        width : '80%',
-        left: '10'
-        
-    });
-    
-    var buttonSearch = Ti.UI.createButton({
-    	top: '0',
-    	right: '10',
-    	widht: '40',
-    	value: 'buscar',
-    	height : '40',
-    });
-    
+
     var resulttable = Ti.UI.createTableView({
         top : '45',
         width : '90%',
@@ -285,10 +294,9 @@ function createComboDestiny(){
 		backgroundColor: '#CCCCCC'
     });
 	 
-	//$.containerScroll.add(search);
 	$.containerScroll.add(buttonSearch);
 	
-	buttonSearch.addEventListener("click", function(event, type) {
+	$.buttonDestiny.addEventListener("click", function(event, type) {
         Titanium.API.info("CLICK EN BUSCAR");
         if ($.comboDestiny.value.length > 3) {
             $.containerScroll.add(resulttable);
