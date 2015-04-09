@@ -1,0 +1,160 @@
+
+// ANDROID *********************************************************
+
+".viewContainer[platform=android]": { 
+	width: Alloy.CFG.WidthDeviceAndroid,
+	backgroundColor: Alloy.CFG.WHITE,
+	top: 20,
+	left: 0,
+	layout: 'vertical'
+}
+
+".pickerStyle[platform=android]": {
+	backgroundColor: Alloy.CFG.WHITE,
+    width: '100%',
+    //paddingLeft: 5,
+    color: Alloy.CFG.GREY2,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	16,
+		fontWeight: 'normal'
+	}
+    
+}
+
+".combo[platform=android]": {
+    height: 45,
+    width: '90%',
+    borderColor: Alloy.CFG.BLUE1,
+    top: 12,
+    //paddingLeft: 5,
+    color: Alloy.CFG.GREY2,
+    borderWidth : '2px',
+    backgroundColor:'transparent',
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	16,
+		fontWeight: 'normal'
+	}
+
+}
+
+".search_button[platform=android]": {
+    height: 45,
+    width: '90%',
+    backgroundColor: Alloy.CFG.GREEN,
+    top: 10,
+    color: Alloy.CFG.WHITE,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	25,
+		fontWeight: 'normal'
+	},
+	bottom: 15
+
+}
+
+".containerScroll[platform=android]": {
+	   contentHeight: Ti.UI.FILL, 
+	   contentWidth: Ti.UI.FILL,   
+	   showVerticalScrollIndicator: 'true',
+	   scrollType: 'vertical',
+	   width: Alloy.CFG.WidthDeviceAndroid ,
+	   backgroundColor: Alloy.CFG.WHITE
+	  
+}
+
+".search_text[platform=android]": {
+	borderWidth: 0,
+    borderColor: Alloy.CFG.WHITE,
+    height: 50,
+    width: '90%',
+    top: 10,
+    color: Alloy.CFG.GREY5,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	13,
+		fontWeight: 'normal'
+	},
+
+}
+
+
+
+
+// IPHONE *********************************************************
+".winPayment[platform=ios]": {
+	backgroundColor: 	Alloy.CFG.WHITE
+  
+}
+
+".viewContainer[platform=ios]": { 
+	width: Alloy.CFG.WidthDeviceIphone,
+	backgroundColor: Alloy.CFG.WHITE,
+	top: 20,
+	left: 0,
+	layout: 'vertical'
+}
+
+".combo[platform=ios]": {
+    height: 40,
+    width: '90%',
+    backgroundColor: Alloy.CFG.WHITE,
+    borderColor: Alloy.CFG.BLUE1,
+    top: 12,
+    paddingLeft: 10,
+    color: Alloy.CFG.GREY2,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	18,
+		fontWeight: 'normal'
+	}
+
+}
+
+".search_button[platform=ios]": {
+    height: 40,
+    width: '90%',
+    backgroundColor: Alloy.CFG.GREEN,
+    top: 10,
+    color: Alloy.CFG.WHITE,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	25,
+		fontWeight: 'normal'
+	},
+	bottom: 15
+
+}
+
+
+".containerScroll[platform=ios]": {
+	   contentHeight: Ti.UI.SIZE, 
+	   contentWidth: Ti.UI.SIZE,   
+	   showVerticalScrollIndicator: 'true',
+	   scrollType: 'vertical',
+	   width: Ti.Platform.displayCaps.platformWidth, 
+	   verticalBounce: 'false',
+	   backgroundColor: Alloy.CFG.WHITE
+	  
+}
+
+".search_text[platform=ios]": {
+	borderWidth: 0,
+    borderColor: Alloy.CFG.WHITE,
+    height: 50,
+    width: '90%',
+    top: 10,
+    color: Alloy.CFG.GREY5,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	13,
+		fontWeight: 'normal'
+	},
+
+}
+
+
+
+
+

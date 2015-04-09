@@ -1,0 +1,22 @@
+// ANDROID *********************************************************
+
+".viewContainer[platform=android]": { 
+	width: Alloy.CFG.WidthDeviceAndroid,
+	backgroundColor: Alloy.CFG.WHITE,
+	top: 0,
+	left: 0
+}
+
+
+
+// IPHONE *********************************************************
+
+".viewContainer[platform=ios]": { 
+	width: Alloy.CFG.WidthDeviceIphone,
+	backgroundColor: Alloy.CFG.WHITE,
+	top: 0,
+	left: 0
+}
+
+
+

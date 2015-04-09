@@ -1,0 +1,360 @@
+
+// ANDROID *********************************************************
+
+".viewContainer[platform=android]": { 
+	width: Alloy.CFG.WidthDeviceAndroid,
+	backgroundColor: Alloy.CFG.WHITE,
+	top: 0,
+	left: 0,
+	layout: 'vertical'
+}
+
+
+".rowList[platform=android]": {
+	height: 'auto',
+	backgroundColor: Alloy.CFG.WHITE,
+	layout: 'vertical'
+}
+
+".title[platform=android]": {
+	color: Alloy.CFG.BLUE1,
+	font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	16,
+		fontWeight: 'bold'
+	},
+	top: 15,
+	left: 10,
+	right: 10
+}
+
+".address[platform=android]": {
+	color: Alloy.CFG.BLACK,
+	font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	12,
+		fontWeight: 'normal'
+	},
+	left: 0
+}
+
+".viewDescription[platform=android]": {
+	left: 10,
+	//right: 10,
+	top: 5,
+	bottom: 25,
+	height: 110,
+	width: 'auto',
+	layout: 'horizontal'
+	}
+	
+	".style_viewDetail[platform=android]": {
+		left: 10,
+		top: 0,
+		layout: 'vertical',
+		width: 'auto'
+	}
+	".style_viewStar[platform=android]": {
+		top: 0,
+		//backgroundColor: Alloy.CFG.BLUE1,
+		height: 25,
+		width: 'auto',
+		layout: 'horizontal'
+		}
+		".style_iconStar[platform=android]": {
+			top: 0,
+			height: 22,
+			width: 25
+			}
+	
+	
+	".textDescription[platform=android]": {
+		color: Alloy.CFG.GREY6,
+		font: {
+			fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+			fontSize: 	13,
+			fontWeight: 'normal'
+		},
+		left: 0,
+		top: 0
+	}
+	
+	".textUnderline[platform=android]": {
+		color: Alloy.CFG.GREY1,
+		font: {
+			fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+			fontSize: 	14,
+			fontWeight: 'bold'
+		},
+		left: 0,
+		top: 10
+	}
+	
+	".imageDescription[platform=android]": {
+		left: 0,
+		top: 0,
+		width: 170,
+		height: 110
+	}
+	
+".viewOffer[platform=android]": {
+	backgroundColor: Alloy.CFG.GREY4,
+	height: 60,
+	top: 0,
+	bottom: 15
+	}
+	
+	".buttonOffer[platform=android]": {
+	    height: 60,
+	    width: 100,
+	    backgroundColor: Alloy.CFG.GREEN,
+	    right: 0,
+	    color: Alloy.CFG.WHITE,
+	    font: {
+			fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+			fontSize: 	15,
+			fontWeight: 'normal'
+		},
+	
+	}
+	
+	".textOffer[platform=android]": {
+		width: 270,
+		color: Alloy.CFG.BLACK,
+		font: {
+			fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+			fontSize: 	12,
+			fontWeight: 'normal'
+		},
+		left: 10,
+		top: 15
+	}
+	
+	".viewHorizontal[platform=android]": {
+		layout: 'horizontal',
+		width: 270,
+		top: 28,
+		left: 10
+		}
+		".textOfferPrice1[platform=android]": {
+			color: Alloy.CFG.BLUE1,
+			font: {
+				fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+				fontSize: 	13,
+				fontWeight: 'bold'
+			},
+			right: "5dp"
+		}
+		".textOfferPrice2[platform=android]": {
+			color: Alloy.CFG.BLUE1,
+			font: {
+				fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+				fontSize: 	11,
+				fontWeight: 'normal'
+			},
+			right: "5dp"
+		}
+		
+		".textOfferPrice3[platform=android]": {
+			color: Alloy.CFG.BLUE1,
+			font: {
+				fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+				fontSize: 	16,
+				fontWeight: 'bold'
+			},
+			right: "5dp"
+		}
+
+	
+".line[platform=android]": {
+	backgroundColor: Alloy.CFG.GREEN,
+	height: 5,
+	top: 10
+	}	
+		
+
+
+
+
+
+
+
+// IPHONE *********************************************************
+
+".viewContainer[platform=ios]": { 
+	width: Alloy.CFG.WidthDeviceIphone,
+	backgroundColor: Alloy.CFG.WHITE,
+	top: 0,
+	left: 0,
+	layout: 'vertical'
+}
+
+
+".rowList[platform=ios]": {
+	height: 'auto',
+	backgroundColor: Alloy.CFG.WHITE,
+	left: 0,
+	layout: 'vertical'
+}
+
+".title[platform=ios]": {
+	color: Alloy.CFG.BLUE1,
+	font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	16,
+		fontWeight: 'bold'
+	},
+	top: 15,
+	left: 10,
+	right: 10
+}
+
+".address[platform=ios]": {
+	color: Alloy.CFG.BLACK,
+	font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	11,
+		fontWeight: 'bold'
+	},
+	left: 0
+}
+
+
+
+	
+	
+".viewDescription[platform=ios]": {
+	left: 10,
+	top: 5,
+	bottom: 25,
+	height: 100,
+	layout: 'horizontal'
+	}
+	".style_viewDetail[platform=ios]": {
+		left: 10,
+		right: 10,
+		top: 0,
+		height: 100,
+		layout: 'vertical'
+	}
+	".style_viewStar[platform=ios]": {
+		top: 0,
+		//backgroundColor: Alloy.CFG.BLUE1,
+		height: 25,
+		width: 'auto',
+		layout: 'horizontal'
+		}
+		".style_iconStar[platform=ios]": {
+			top: 0,
+			height: 22,
+			width: 25
+			}
+	
+	".textDescription[platform=ios]": {
+		color: Alloy.CFG.GREY6,
+		font: {
+			fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+			fontSize: 	12,
+			fontWeight: 'bold'
+		},
+		left: 0,
+	}
+	
+	".textUnderline[platform=ios]": {
+		color: Alloy.CFG.GREY1,
+		font: {
+			fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+			fontSize: 	12,
+			fontWeight: 'normal'
+		},
+		left: 0,
+		top: 10,
+	}
+	
+	".imageDescription[platform=ios]": {
+		left: 0,
+		top: 0, 
+		width: 130,
+		height: 100
+	}
+	
+".viewOffer[platform=ios]": {
+	backgroundColor: Alloy.CFG.GREY4,
+	height: 60,
+	top: 0,
+	bottom: 15
+	}
+	
+	".buttonOffer[platform=ios]": {
+	    height: 60,
+	    width: 90,
+	    backgroundColor: Alloy.CFG.GREEN,
+	    right: 0,
+	    color: Alloy.CFG.WHITE,
+	    font: {
+			fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+			fontSize: 	13,
+			fontWeight: 'normal'
+		},
+	
+	}
+	
+	".textOffer[platform=ios]": {
+		//backgroundColor: Alloy.CFG.GREEN,
+		width: 270,
+		color: Alloy.CFG.BLACK,
+		font: {
+			fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+			fontSize: 	10,
+			fontWeight: 'normal'
+		},
+		left: 10,
+		top: 15
+	}
+	
+	".viewHorizontal[platform=ios]": {
+		layout: 'horizontal',
+		width: 210,
+		top: 28,
+		left: 10
+		}
+		".textOfferPrice1[platform=ios]": {
+			color: Alloy.CFG.BLUE1,
+			font: {
+				fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+				fontSize: 	12,
+				fontWeight: 'bold'
+			},
+			right: '5dp'
+		
+		}
+		".textOfferPrice2[platform=ios]": {
+			color: Alloy.CFG.BLUE1,
+			font: {
+				fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+				fontSize: 	10,
+				fontWeight: 'normal'
+			},
+			right: '5dp'
+		}
+		
+		".textOfferPrice3[platform=ios]": {
+			color: Alloy.CFG.BLUE1,
+			font: {
+				fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+				fontSize: 	16,
+				fontWeight: 'bold'
+			},
+			right: '5dp'
+		}
+
+	
+".line[platform=ios]": {
+	backgroundColor: Alloy.CFG.GREEN,
+	height: 5,
+	top: 10
+	}	
+		
+
+	
+		

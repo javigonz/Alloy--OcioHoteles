@@ -1,0 +1,31 @@
+<Alloy>
+	
+	<ScrollView  class="containerScroll" showPagingControl="false" id="containerScroll" > 
+		
+		<View class="viewContainer" id="viewContainer" >
+			
+			<!-- PAIS -->
+			<TextArea class="combo" id="comboCountry" platform="ios"  touchEnabled="true"  ></TextArea>
+			<View platform="android" class="combo" id="comboCountry" ></View>
+			
+			<!-- DESTINO SÓLO SI EL PAÍS ES ESPAÑA -->
+			<TextArea class="combo" id="comboDestinySpain" platform="ios"  touchEnabled="true" ></TextArea>
+			<View platform="android" class="combo" id="comboDestinySpain" ></View>
+			
+			<!-- DESTINO PARA EL RESTO DE PAÍSES -->
+			<TextField class="combo" id="comboDestiny" hintText="Elige el destino..."></TextField>
+			
+			<!-- ZONAS SÓLO SI EL PAÍS ES ESPAÑA -->
+			<TextArea class="combo" id="comboZonesSpain" platform="ios"  touchEnabled="true"  ></TextArea>
+			<View platform="android" class="combo" id="comboZonesSpain"></View>
+
+									
+			<Button class="search_button" id="id_buttonLogin" title="L('text_13')" onClick="handler_initSearch"></Button>
+			
+			<Label editable="false" class="search_text" text="L('text_14')"></Label>
+							
+	</View>
+	
+	</ScrollView>	
+	
+</Alloy>

@@ -1,0 +1,11 @@
+.DS_Store
+Resources
+build.log
+build
+PackageBuild
+npm-debug.log
+tmp
+.map
+.project
+.settings
+Thumbs.db

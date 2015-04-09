@@ -1,0 +1,10 @@
+<Alloy>
+	
+	<View class="viewContainer" id="viewContainer" >
+		
+		<Button class="search_button" id="id_buttonMiTarjeta" title="L('text_8')" onClick="gotoSearch" ></Button>
+		<Button class="search_button" id="id_buttonMisBonos" title="L('text_9')" onClick="gotoSearch"></Button>
+		
+	</View>
+	
+</Alloy>

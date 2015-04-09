@@ -1,0 +1,51 @@
+// ANDROID *********************************************************
+
+".viewContainer[platform=android]": { 
+	width: Alloy.CFG.WidthDeviceAndroid,
+	backgroundColor: Alloy.CFG.WHITE,
+	top: 20,
+	left: 0,
+	layout: 'vertical'
+}
+
+".search_button[platform=android]": {
+	top: 20,
+    height: 50,
+    width: '90%',
+    backgroundColor: Alloy.CFG.GREEN,
+    color: Alloy.CFG.WHITE,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	22,
+		fontWeight: 'normal'
+	}
+
+}
+
+
+// IPHONE *********************************************************
+
+".viewContainer[platform=ios]": { 
+	width: Alloy.CFG.WidthDeviceIphone,
+	backgroundColor: Alloy.CFG.WHITE,
+	top: 20,
+	left: 0,
+	layout: 'vertical'
+}
+
+".search_button[platform=ios]": {
+	top: 20,
+    height: 50,
+    width: '90%',
+    backgroundColor: Alloy.CFG.GREEN,
+    color: Alloy.CFG.WHITE,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	22,
+		fontWeight: 'normal'
+	}
+
+}
+
+
+

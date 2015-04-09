@@ -1,0 +1,36 @@
+<Alloy>
+	
+	<View class="viewContainer" id="viewContainer" >
+	
+		<TableView id="tableView_hotels" >
+			
+	      <!--  <TableViewRow class="rowList" > 
+	        	
+	            <Label class="title" text="{nombre}" scope="{id}"/>
+	            <Label class="address" text="MIGUEL HERNANDEZ S/N, 04638 - MOJACAR - Almería (ESPAÑA)" scope="{id}"/>
+	            <View class="viewDescription">
+	            	<ImageView class="imageDescription" image="/fotoCasa.png"></ImageView>
+	            	<Label class="textDescription" text="{descripcion_corta}"></Label>
+	            </View>
+	            <View class="viewOffer" >
+	            	<Label class="textOffer" text="Sólo alojamiento - Dormitorio 4 Pax."></Label>
+	            	<View class="viewHorizontal">
+	            		<Label class="textOfferPrice1" text="19"></Label>
+	            		<Label class="textOfferPrice2" text="(pers/día)"></Label>
+	            		<Label class="textOfferPrice3" text="95,00 €"></Label>
+	            		<Label class="textOfferPrice2" text="(precio total)"></Label>
+	            	</View>
+	            	
+	            	<Button class="buttonOffer"  title="L('text_16')" ></Button>
+	            </View>
+	             
+	            <View class="line"></View>
+	            
+	    </TableViewRow>-->
+	        
+	    </TableView>	
+							
+	</View>
+	
+	
+</Alloy>

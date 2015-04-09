@@ -1,0 +1,112 @@
+// ANDROID *********************************************************
+".menuContainer[platform=android]": { 
+	backgroundColor: Alloy.CFG.GREY3,
+	width: Ti.UI.FILL,
+	top: 0,
+	layout: 'vertical'
+}
+
+".viewHeader[platform=android]": { 
+	backgroundColor: Alloy.CFG.GREEN,
+	height: Alloy.Globals.Height_Header,
+	width: Ti.UI.FILL,
+	top: 0
+}
+
+".viewRowMenu[platform=android]": { 	
+	height: 45,
+	width: Ti.UI.FILL,
+}
+
+".labelMenu[platform=android]": {
+	color: Alloy.CFG.BLUE1,
+	font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	17,
+		fontWeight: 'normal'
+	},
+	left: 50
+}
+
+".separatorLine[platform=android]": { 
+	top:44,
+	backgroundColor: Alloy.CFG.GREY4,
+	height: 1,
+	width: Ti.UI.FILL,
+}
+
+".icon1[platform=android]": { 
+	left:10,
+	height: 34,
+	width: 31,
+}
+
+".icon2[platform=android]": { 
+	left:10,
+	height: 34,
+	width: 34,
+}
+
+".icon3[platform=android]": { 
+	left:10,
+	height: 34,
+	width: 25,
+}
+
+
+
+// IPHONE *********************************************************
+".menuContainer[platform=ios]": { 
+	backgroundColor: Alloy.CFG.GREY3,
+	width: Ti.UI.FILL,
+	top: 0,
+	layout: 'vertical'
+}
+
+".viewHeader[platform=ios]": { 
+	backgroundColor: Alloy.CFG.GREEN,
+	height: Alloy.Globals.Height_Header,
+	width: Ti.UI.FILL,
+	top: 20
+}
+
+".viewRowMenu[platform=ios]": { 
+	height: 45,
+	width: Ti.UI.FILL
+}
+
+".labelMenu[platform=ios]": {
+	color: Alloy.CFG.BLUE1,
+	font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	15,
+		fontWeight: 'normal'
+	},
+	left: 50
+}
+
+".separatorLine[platform=ios]": { 
+	top:44,
+	backgroundColor: Alloy.CFG.GREY4,
+	height: 1,
+	width: Ti.UI.FILL,
+}
+
+".icon1[platform=ios]": { 
+	left:10,
+	height: 34,
+	width: 31,
+}
+
+".icon2[platform=ios]": { 
+	left:10,
+	height: 34,
+	width: 34,
+}
+
+".icon3[platform=ios]": { 
+	left:10,
+	height: 34,
+	width: 25,
+}
+

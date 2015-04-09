@@ -1,0 +1,9 @@
+<Alloy>
+	
+	<View class="viewContainer" id="viewContainer" >
+		
+		<Label text="GENERAL CONDITIONS"></Label>
+		
+	</View>
+	
+</Alloy>

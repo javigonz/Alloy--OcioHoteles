@@ -1,0 +1,16 @@
+<Alloy>
+	
+	<View class="viewContainer" id="viewContainer" >
+		
+		<ImageView class="login_logo"  image="/images/logoLogin.png"></ImageView>
+		
+		<TextField class="login_combo" id="id_comboUser"  touchEnabled="true"  passwordMask="false" hintText="L('text_5')" value="miguelcano@solbyte.com"></TextField>
+		<TextField class="login_combo" id="id_comboPass"  touchEnabled="true" passwordMask="true" hintText="L('text_6')" value="solbyte" ></TextField>
+		
+		<Button class="login_button" id="id_buttonSearch" title="L('text_7')" onClick="handler_login"></Button>
+		
+		<Label class="login_text" text="L('text_19')" onClick="handler_goToWeb"></Label>
+		
+	</View>
+	
+</Alloy>

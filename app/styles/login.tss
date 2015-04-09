@@ -1,0 +1,116 @@
+// ANDROID *********************************************************
+
+".viewContainer[platform=android]": { 
+	width: Alloy.CFG.WidthDeviceAndroid,
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0,
+	left: 0,
+	layout: 'vertical'
+}
+
+".login_logo[platform=android]": { 
+    top: 0
+    
+
+}
+
+".login_combo[platform=android]": {
+    height: 45,
+    width: '90%',
+    top: 10,
+    paddingLeft: 5,
+    color: Alloy.CFG.BLACK,
+    borderColor: Alloy.CFG.BLUE1,
+    borderWidth : '2px',
+    backgroundColor:'transparent',
+
+}
+
+".login_button[platform=android]": {
+    height: 45,
+    width: '90%',
+    backgroundColor: Alloy.CFG.GREEN,
+    top: 10,
+    color: Alloy.CFG.WHITE,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	25,
+		fontWeight: 'normal'
+	},
+	bottom: 15
+
+}
+
+".login_text[platform=android]": {
+	width: '90%',
+    top: 10,
+    color: Alloy.CFG.BLUE1,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	15,
+		fontWeight: 'normal'
+	}
+
+}
+
+
+
+// IPHONE *********************************************************
+
+".viewContainer[platform=ios]": { 
+	width: Alloy.CFG.WidthDeviceIphone,
+	backgroundColor:Alloy.CFG.WHITE,
+	top: 0,
+	left: 0,
+	layout: 'vertical'
+}
+
+".login_logo[platform=ios]": { 
+    top: 0
+    
+
+}
+
+".login_combo[platform=ios]": {
+    height: 40,
+    width: '90%',
+    top: 10,
+    paddingLeft: 5,
+    color: Alloy.CFG.BLACK,
+    borderColor: Alloy.CFG.BLUE1,
+    borderWidth : '2px',
+    backgroundColor:'transparent',
+
+}
+
+".login_button[platform=ios]": {
+    height: 40,
+    width: '90%',
+    backgroundColor: Alloy.CFG.GREEN,
+    top: 10,
+    color: Alloy.CFG.WHITE,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	25,
+		fontWeight: 'normal'
+	},
+	bottom: 15
+
+}
+
+".login_text[platform=ios]": {
+    height: 40,
+    width: '90%',
+    top: 10,
+    color: Alloy.CFG.BLUE1,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	15,
+		fontWeight: 'normal'
+	},
+	bottom: 15
+
+}
+
+
+

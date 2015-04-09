@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+	<!-- Menu -->
+	<string name="text_1">Desconectar</string>
+	<string name="text_2">Buscador</string>
+	<string name="text_3">Condiciones generales</string>
+	<string name="text_4">Aviso legal</string>
+
+	<!-- Login -->
+	<string name="text_5">Usuario</string>
+	<string name="text_6">Contraseña</string>
+	<string name="text_7">Entrar</string>
+	<string name="text_19">Sino está registrado pinche aquí.</string>
+
+	<!-- Search -->
+	<string name="text_8">Buscar con mi tarjeta</string>
+	<string name="text_9">Buscar con mis bonos</string>
+	<string name="text_10">Cancelar</string>
+	<string name="text_11">Seleccionar</string>
+	<string name="text_12">Elige el país...</string>
+	<string name="text_13">Iniciar búsqueda</string>
+	<string name="text_14">Si desea revervar más de tres habitaciones, por favor, llame a nuestro servicio de reservas 951 204 220</string>
+	<string name="text_23">Elige el destino...</string>
+	<string name="text_24">Elige la zona...</string>
+
+	<!-- Hoteles -->
+	<string name="text_15">Hoteles</string>
+	<string name="text_16">RESERVAR</string>
+
+	<!-- Hotel Detalle -->
+	<string name="text_17">Detalle del Hotel</string>
+	<string name="text_18">Ver Mapa</string>
+
+	<!-- Mensajes Comunes -->
+	<string name="text_20">Upss!, se produjo un error inesperado, inténtalo más tarde.</string>
+	<string name="text_21">Cerrar</string>
+	<string name="text_22">Debes introducir correctamente los siguientes datos: </string>
+
+</resources>

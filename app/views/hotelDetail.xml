@@ -1,0 +1,11 @@
+<Alloy>
+	
+	<ScrollView  class="containerScroll" showPagingControl="false" id="containerScroll" > 
+		<View class="viewContainer" id="viewContainer" >
+		
+								
+		</View>
+	</ScrollView>	
+	
+	
+</Alloy>
