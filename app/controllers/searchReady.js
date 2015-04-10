@@ -2,6 +2,10 @@ var managment_View = require('managment_View');
 var managment_Data = require('managment_Data');
 var utils = require('utils');
 
+//Estilos
+var tableResult = $.createStyle({classes: ['tableResult']});
+var resulttable;
+	
 show();
 
 
@@ -40,16 +44,16 @@ function show(){
 	$.buttonDestiny.width = '0';
 	$.buttonDestiny.height = '0';
 	
+	$.containerDestiny.visible = 'false';
+	$.containerDestiny.width = '0';
+	$.containerDestiny.height = '0';
+	
+	createComboDestiny();
 	
 	
 	Ti.App.fireEvent('openLoading');
 	Ti.App.addEventListener('loadSearchCountries', createComboCountry);
 	managment_Data.LoadWebService_SearchLoadCountries();
-
-
-
-	
-	
 
 }
 
@@ -100,6 +104,14 @@ function createComboCountry(){
 							$.buttonDestiny.width = '0';
 							$.buttonDestiny.height = '0';
 							
+							$.buttonDestiny.visible = 'false';
+							$.buttonDestiny.width = '0';
+							$.buttonDestiny.height = '0';
+							
+							$.containerDestiny.visible = 'false';
+							$.containerDestiny.width = '0';
+							$.containerDestiny.height = '0';
+							
 							$.comboDestinySpain.visible = 'true';
 							$.comboDestinySpain.width = '90%';
 							$.comboDestinySpain.height = '45';
@@ -122,7 +134,9 @@ function createComboCountry(){
 							$.buttonDestiny.width = '70';
 							$.buttonDestiny.height = '45';
 							
-							createComboDestiny();
+							$.containerDestiny.visible = 'true';
+							$.containerDestiny.width = '90%';
+							$.containerDestiny.height = '45';
 						}
 			});
 											
@@ -139,6 +153,9 @@ function createComboCountry(){
 			
 			
 		}
+		
+		$.comboDateIn.addEventListener('click', createDateIn);
+		$.comboDateOut.addEventListener('click', createDateOut);
 		
 		
 	}
@@ -269,11 +286,9 @@ function createComboZonesSpain(){
 		
 			$.comboZonesSpain.add(picker);
 			$.comboZonesSpain.add(imagen1);	
-			
-			
+						
 		}
-		
-		
+				
 	}
 	else
 	{
@@ -288,25 +303,25 @@ function createComboZonesSpain(){
 function createComboDestiny(){
 	
 
-    var resulttable = Ti.UI.createTableView({
-        top : '45',
-        width : '90%',
-        height : '300',
-        separatorColor : '#000000',
-		backgroundColor: '#CCCCCC'
-    });
+    resulttable = Ti.UI.createTableView({});   
+    resulttable.applyProperties(tableResult);
 	 
 	
 	$.buttonDestiny.addEventListener("click", function(event, type) {
         Titanium.API.info("CLICK EN BUSCAR");
+        Ti.UI.Android.hideSoftKeyboard();
         if ($.comboDestiny.value.length > 3) {
             $.containerScroll.add(resulttable);
             if (resulttable.data.length > 0) {
-                for (var i = resulttable.data[0].rows.length - 1; i >= 0; i--) {
-                    resulttable.deleteRow(i);
-                }
+            	
+            	 for (var i = resulttable.data[0].rows.length - 1; i >= 0; i--) {
+	                resulttable.deleteRow(i);
+	            }
             }
-            auto_complete($.comboDestiny.value);
+            
+            Ti.App.addEventListener('loadSearchDestinies', auto_complete);
+			managment_Data.LoadWebService_SearchLoadDestinies($.comboDestiny.value);
+           // auto_complete($.comboDestiny.value);
         } else {
             $.containerScroll.remove(resulttable);
         }
@@ -318,49 +333,92 @@ function createComboDestiny(){
  		$.comboDestiny.value = e.rowData.title;
  		$.containerScroll.remove(resulttable);
  		if (resulttable.data.length > 0) {
-            for (var i = resulttable.data[0].rows.length - 1; i >= 0; i--) {
+ 			
+ 			 for (var i = resulttable.data[0].rows.length - 1; i >= 0; i--) {
                 resulttable.deleteRow(i);
             }
         }
  		
 	});
-    
-	 
-	function auto_complete(search_term)
-	{
-	      var loader = Ti.Network.createHTTPClient({
-		        onload: function(e) {
-		        	
-		        	var table_data = [];
-		         	var datos = JSON.parse (this.responseText);
-		         	
-		            for (var i = 0; i < datos.destinos.length; i++) {
-		            	   console.log('row data - ' + datos.destinos[i].id);
-			               var row = Ti.UI.createTableViewRow(
-			               {
-			                  height: 40,
-			                  title: datos.destinos[i].nombre,
-			                  hasDetail:true
-			               });
-	
-			               table_data.push(row);
-		            }
-	
-		            resulttable.setData(table_data);
-		        }	
-	        	
-	      });
-	      
-	      var dataSend = {
-			 			'method': 'getDestinos'
-			  	   };
-	
-	      loader.open("POST", "http://desarrollo.ociohoteles.com/webService.php"); 
-	   	  loader.send( {data:JSON.stringify(dataSend)});
-   
-	}
 	
 }
+
+
+function auto_complete(){
+	
+	Ti.App.removeEventListener('loadSearchDestinies', auto_complete);
+	
+	if (datamodel_Search_destinies.result === 'ok')
+	{
+		var table_data = [];
+     	
+     	datamodel_Search_destinies.destinos.forEach(function (element, index, array) {
+			console.log('row data - ' + element.nombre);
+               var row = Ti.UI.createTableViewRow(
+               {
+                  height: 40,
+                  title: element.nombre,
+                  hasDetail:true
+               });
+
+               table_data.push(row);
+			
+		});
+       
+        resulttable.setData(table_data);
+	}
+	else
+	{
+		//Error en el autocompletado
+	}
+
+}
+
+
+
+///////////////////////////////////////// CREA EL COMBO DE FECHA DE ENTRADA
+function createDateIn(){
+	
+	var currentTime = new Date();
+	
+	var pickerdate = Ti.UI.createPicker({
+	  type:Ti.UI.PICKER_TYPE_DATE,
+	  minDate:new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate())
+	});
+	
+	pickerdate.showDatePickerDialog({
+	  callback: function(e) {
+	    if (e.cancel) {
+	      Ti.API.info('User canceled dialog');
+	    } else {
+	    	$.text_comboDateIn.text = e.value.getDate() + '/' + (Number(e.value.getMonth()) + 1) + '/' + e.value.getFullYear();
+	    }
+	  }
+	});
+}
+
+
+///////////////////////////////////////// CREA EL COMBO DE FECHA DE SALIDA
+function createDateOut(){
+	
+	var currentTime = new Date();
+	
+	var pickerdate = Ti.UI.createPicker({
+	  type:Ti.UI.PICKER_TYPE_DATE,
+	  minDate:new Date(currentTime.getFullYear(), currentTime.getMonth(), currentTime.getDate())
+	});
+	
+	pickerdate.showDatePickerDialog({
+	  callback: function(e) {
+	    if (e.cancel) {
+	      Ti.API.info('User canceled dialog');
+	    } else {
+	    	$.text_comboDateOut.text = e.value.getDate() + '/' + (Number(e.value.getMonth()) + 1) + '/' + e.value.getFullYear();
+	    }
+	  }
+	});
+}
+
 
 
 /* ***********************************************************

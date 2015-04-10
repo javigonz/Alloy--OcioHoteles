@@ -250,6 +250,46 @@ exports.LoadWebService_SearchLoadZonesSpain = function(_id){
 };
 
 
+
+
+//************************************************************************************************************************
+//Carga WEBSERVICE de Destinos autocompletados para todos los países menos España
+//************************************************************************************************************************
+exports.LoadWebService_SearchLoadDestinies = function(value_search){
+	
+	var client = Ti.Network.createHTTPClient({
+	     onload : function(e) {
+	     	
+	     		try{
+			         datamodel_Search_destinies = JSON.parse (this.responseText);
+			         Ti.App.fireEvent('loadSearchDestinies');
+	     		}
+	     		catch (e){
+	     			 managment_View.OpenInfoWindow( L('text_20'));
+	     		}
+	        
+
+	     },
+	     onerror : function(e) {
+	         managment_View.OpenInfoWindow( L('text_20'));
+	     },
+	     timeout : 5000  // in milliseconds
+ 	});
+ 	
+    client.validatesSecureCertificate = false;
+
+ 	client.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+ 	
+	var dataSend = {
+			 			'method': 'getDestinos'
+			  	   };
+	
+	client.open("POST", url_WebService_Login); 
+	client.send( {data:JSON.stringify(dataSend)});
+	
+};
+
+
 //************************************************************************************************************************
 //Carga WEBSERVICE de Agenda
 //************************************************************************************************************************

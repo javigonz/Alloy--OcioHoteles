@@ -24,6 +24,8 @@
 	<string name="text_14">Si desea revervar más de tres habitaciones, por favor, llame a nuestro servicio de reservas 951 204 220</string>
 	<string name="text_23">Elige el destino...</string>
 	<string name="text_24">Elige la zona...</string>
+	<string name="text_25">Fecha de entrada...</string>
+	<string name="text_26">Fecha de salida...</string>
 
 	<!-- Hoteles -->
 	<string name="text_15">Hoteles</string>

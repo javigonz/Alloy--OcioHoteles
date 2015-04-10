@@ -27,6 +27,7 @@ Alloy.CFG.GREY3	 		= "#f2f2f2";
 Alloy.CFG.GREY4	 		= "#e2e2e2";
 Alloy.CFG.GREY5	 		= "#696969";
 Alloy.CFG.GREY6	 		= "#7f7f7f";
+Alloy.CFG.GREY7	 		= "#dfdfdf";
 
 
 //Device height&width
@@ -53,6 +54,7 @@ var datamodel_CloseSession = [];
 var datamodel_Search_countries = [];
 var datamodel_Search_destinySpain = [];
 var datamodel_Search_zonesSpain = [];
+var datamodel_Search_destinies = [];
 
 Alloy.Collections.model_hotels = [];
 

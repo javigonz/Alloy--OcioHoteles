@@ -24,8 +24,18 @@
 					<TextField class="combo2" id="comboDestiny" hintText="Elige el destino..."></TextField>
 					<Button class="destiny_button" id="buttonDestiny" title="Buscar" ></Button>
 				</View>
-
-									
+			
+			
+			<!-- FECHA DE ENTRADA -->	
+			<View class="combo" id="comboDateIn"  editable="false">
+				<Label id="text_comboDateIn" class="text_comboDate" text="L('text_25')"></Label>
+			</View>	
+			
+			<!-- FECHA DE SALIDA -->
+			<View class="combo" id="comboDateOut"  editable="false">	
+				<Label id="text_comboDateOut" class="text_comboDate" text="L('text_26')"></Label>
+			</View>
+				
 			<Button class="search_button" id="id_buttonLogin" title="L('text_13')" onClick="handler_initSearch"></Button>
 			
 			<Label editable="false" class="search_text" text="L('text_14')"></Label>

@@ -28,7 +28,7 @@
     borderColor: Alloy.CFG.BLUE1,
     top: 12,
     //paddingLeft: 5,
-    color: Alloy.CFG.GREY2,
+    color: Alloy.CFG.BLACK,
     borderWidth : '2px',
     backgroundColor:'transparent',
     font: {
@@ -114,6 +114,26 @@
     font: {
 		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
 		fontSize: 	13,
+		fontWeight: 'normal'
+	},
+
+}
+
+".tableResult[platform=android]": {
+	    top : 150,
+        width : '90%',
+        height : 200,
+        separatorColor : Alloy.CFG.GREY7,
+		backgroundColor: Alloy.CFG.GREY3
+}
+
+".text_comboDate[platform=android]": {
+    left: 10,
+    top: 15,
+    color: Alloy.CFG.BLACK,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	15,
 		fontWeight: 'normal'
 	},
 
