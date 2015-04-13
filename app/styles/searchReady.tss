@@ -57,6 +57,40 @@
 
 }
 
+".combo3[platform=android]": {
+    height: 45,
+    width: '40%',
+    borderColor: Alloy.CFG.BLUE1,
+    top: 0,
+    left: 0,
+    //paddingLeft: 5,
+    color: Alloy.CFG.BLACK,
+    borderWidth : '2px',
+    backgroundColor:'transparent',
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	16,
+		fontWeight: 'normal'
+	}
+}
+
+".combo4[platform=android]": {
+    height: 45,
+    width: '40%',
+    borderColor: Alloy.CFG.BLUE1,
+    top: 0,
+    right: 0,
+    //paddingLeft: 5,
+    color: Alloy.CFG.BLACK,
+    borderWidth : '2px',
+    backgroundColor:'transparent',
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	16,
+		fontWeight: 'normal'
+	}
+}
+
 ".search_button[platform=android]": {
     height: 45,
     width: '90%',
@@ -95,6 +129,7 @@
 }
 
 ".containerScroll[platform=android]": {
+	   width: Alloy.CFG.WidthDeviceAndroid,
 	   contentHeight: Ti.UI.FILL, 
 	   contentWidth: Ti.UI.FILL,   
 	   showVerticalScrollIndicator: 'true',
@@ -137,6 +172,25 @@
 		fontWeight: 'normal'
 	},
 
+}
+
+
+".headline[platform=android]": {
+    top: 10,
+    width : '90%',
+    color: Alloy.CFG.BLUE1,
+    font: {
+		fontFamily: Alloy.CFG.ARIAL_NORMAL, 
+		fontSize: 	16,
+		fontWeight: 'normal'
+	}
+}
+
+".containerHorizontal[platform=android]": {
+	    top : 0,
+        width : '90%',
+        height : 50,
+        layout : 'horizontal'
 }
 
 

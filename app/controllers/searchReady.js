@@ -49,6 +49,7 @@ function show(){
 	$.containerDestiny.height = '0';
 	
 	createComboDestiny();
+	createComboRooms();
 	
 	
 	Ti.App.fireEvent('openLoading');
@@ -80,6 +81,7 @@ function createComboCountry(){
 				picker_data.push(Titanium.UI.createPickerRow({title: utils.strNormalize(element.nombre), id: element.id}));
 				
 			});
+			
 			
 			//estilo
 			var pickerStyle = $.createStyle({classes: ['pickerStyle']});
@@ -150,6 +152,30 @@ function createComboCountry(){
 		
 			$.comboCountry.add(picker);
 			$.comboCountry.add(imagen1);	
+			
+			picker.getSelectedRow(0).id = '28';
+			picker.getSelectedRow(0).title = 'ESPAÑA';
+			picker.fireEvent('change');
+			loadDataDestinySpain();
+			$.comboDestiny.visible = 'false';
+			$.comboDestiny.width = '0';
+			$.comboDestiny.height = '0';
+			
+			$.buttonDestiny.visible = 'false';
+			$.buttonDestiny.width = '0';
+			$.buttonDestiny.height = '0';
+			
+			$.buttonDestiny.visible = 'false';
+			$.buttonDestiny.width = '0';
+			$.buttonDestiny.height = '0';
+			
+			$.containerDestiny.visible = 'false';
+			$.containerDestiny.width = '0';
+			$.containerDestiny.height = '0';
+			
+			$.comboDestinySpain.visible = 'true';
+			$.comboDestinySpain.width = '90%';
+			$.comboDestinySpain.height = '45';
 			
 			
 		}
@@ -418,6 +444,58 @@ function createDateOut(){
 	  }
 	});
 }
+
+
+
+
+///////////////////////////////////////// CREA EL COMBO PARA NÚMERO DE HABITACIONES
+function createComboRooms(){
+	
+	if (Ti.Platform.osname == "iphone")
+	{	
+		
+		
+	}
+	else
+	{
+		
+		var picker_data = [];
+		picker_data[0]=Ti.UI.createPickerRow({title:L('text_27')});
+		picker_data.push(Titanium.UI.createPickerRow({title: '1', id: '1'}));
+		picker_data.push(Titanium.UI.createPickerRow({title: '2', id: '2'}));
+		picker_data.push(Titanium.UI.createPickerRow({title: '3', id: '3'}));
+	
+		
+		//estilo
+		var pickerStyle = $.createStyle({classes: ['pickerStyle']});
+								
+		var picker = Titanium.UI.createPicker({});
+		picker.selectionIndicator=true;
+		picker.applyProperties(pickerStyle);
+										
+		picker.add(picker_data);
+										
+		picker.addEventListener('change', function(){
+					
+		});
+										
+		//Imagen de flecha abajo
+		var imagen1 = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+	
+		$.comboRooms.add(picker);
+		$.comboRooms.add(imagen1);	
+		
+		
+	}
+
+}
+
+
 
 
 

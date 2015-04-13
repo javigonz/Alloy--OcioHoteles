@@ -26,6 +26,12 @@
 	<string name="text_24">Elige la zona...</string>
 	<string name="text_25">Fecha de entrada...</string>
 	<string name="text_26">Fecha de salida...</string>
+	<string name="text_27">Número de habitaciones...</string>
+	<string name="text_28">Habitación 1</string>
+	<string name="text_29">Habitación 2</string>
+	<string name="text_30">Habitación 3</string>
+	<string name="text_31">Adultos</string>
+	<string name="text_32">Niños</string>
 
 	<!-- Hoteles -->
 	<string name="text_15">Hoteles</string>

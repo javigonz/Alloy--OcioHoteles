@@ -35,6 +35,22 @@
 			<View class="combo" id="comboDateOut"  editable="false">	
 				<Label id="text_comboDateOut" class="text_comboDate" text="L('text_26')"></Label>
 			</View>
+			
+			<!-- NÚMERO DE HABITACIONES -->
+			<TextArea class="combo" id="comboRooms" platform="ios"  touchEnabled="true"  ></TextArea>
+			<View platform="android" class="combo" id="comboRooms" ></View>
+			
+			<!-- HABITACIÓN 1 -->
+			<Label text="L('text_28')" id="textRoom1" class="headline"></Label>
+			<View class="containerHorizontal" id="containerRoom1">
+				<TextArea class="combo3" id="comboAdult1" platform="ios"  touchEnabled="true"  ></TextArea>
+				<View platform="android" class="combo3" id="comboAdult1" ></View>
+				
+				<TextArea class="combo4" id="comboChildren1" platform="ios"  touchEnabled="true"  ></TextArea>
+				<View platform="android" class="combo4" id="comboChildren1" ></View>
+			</View>
+			
+			
 				
 			<Button class="search_button" id="id_buttonLogin" title="L('text_13')" onClick="handler_initSearch"></Button>
 			
