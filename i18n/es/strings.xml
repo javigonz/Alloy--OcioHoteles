@@ -32,6 +32,8 @@
 	<string name="text_30">Habitación 3</string>
 	<string name="text_31">Adultos</string>
 	<string name="text_32">Niños</string>
+	<string name="text_33">Edad niño 1</string>
+	<string name="text_34">Edad niño 2</string>
 
 	<!-- Hoteles -->
 	<string name="text_15">Hoteles</string>

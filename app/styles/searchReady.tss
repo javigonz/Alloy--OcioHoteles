@@ -59,7 +59,7 @@
 
 ".combo3[platform=android]": {
     height: 45,
-    width: '40%',
+    width: '45%',
     borderColor: Alloy.CFG.BLUE1,
     top: 0,
     left: 0,
@@ -76,7 +76,7 @@
 
 ".combo4[platform=android]": {
     height: 45,
-    width: '40%',
+    width: '45%',
     borderColor: Alloy.CFG.BLUE1,
     top: 0,
     right: 0,
@@ -189,8 +189,7 @@
 ".containerHorizontal[platform=android]": {
 	    top : 0,
         width : '90%',
-        height : 50,
-        layout : 'horizontal'
+        height : 50
 }
 
 

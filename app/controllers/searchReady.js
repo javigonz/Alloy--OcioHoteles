@@ -48,8 +48,40 @@ function show(){
 	$.containerDestiny.width = '0';
 	$.containerDestiny.height = '0';
 	
+	$.containerRoom1.visible = 'false';
+	$.containerRoom1.width = 0;
+	$.containerRoom1.height = 0;
+	
+	$.containerRoom2.visible = 'false';
+	$.containerRoom2.width = 0;
+	$.containerRoom2.height = 0;
+	
+	$.containerRoom3.visible = 'false';
+	$.containerRoom3.width = 0;
+	$.containerRoom3.height = 0;
+	
+	$.textRoom2.visible = 'false';
+	$.containerRoom2.visible = 'false';
+	$.containerRoom2.width = '0';
+	$.containerRoom2.height = '0';
+	$.containerRoom2_2.visible = 'false';
+	$.containerRoom2_2.width = '0';
+	$.containerRoom2_2.height = '0';
+	
+	$.textRoom3.visible = 'false';
+	$.containerRoom3.visible = 'false';
+	$.containerRoom3.width = '0';
+	$.containerRoom3.height = '0';
+	$.containerRoom3_3.visible = 'false';
+	$.containerRoom3_3.width = '0';
+	$.containerRoom3_3.height = '0';
+
+	
 	createComboDestiny();
 	createComboRooms();
+	createComboRoom1();
+	createComboRoom2();
+	createComboRoom3();
 	
 	
 	Ti.App.fireEvent('openLoading');
@@ -476,7 +508,61 @@ function createComboRooms(){
 		picker.add(picker_data);
 										
 		picker.addEventListener('change', function(){
-					
+				
+				switch (picker.getSelectedRow(0).id)
+				{
+					case '1':   $.textRoom2.visible = 'false';
+								$.containerRoom2.visible = 'false';
+								$.containerRoom2.width = '0';
+								$.containerRoom2.height = '0';
+								$.containerRoom2_2.visible = 'false';
+								$.containerRoom2_2.width = '0';
+								$.containerRoom2_2.height = '0';
+								
+								$.textRoom3.visible = 'false';
+								$.containerRoom3.visible = 'false';
+								$.containerRoom3.width = '0';
+								$.containerRoom3.height = '0';
+								$.containerRoom3_3.visible = 'false';
+								$.containerRoom3_3.width = '0';
+								$.containerRoom3_3.height = '0';
+								
+								break;
+					case '2':   $.textRoom2.visible = 'true';
+								$.containerRoom2.visible = 'true';
+								$.containerRoom2.width = '90%';
+								$.containerRoom2.height = '50';
+								$.containerRoom2_2.visible = 'true';
+								$.containerRoom2_2.width = '90%';
+								$.containerRoom2_2.height = '50';
+								
+								$.textRoom3.visible = 'false';
+								$.containerRoom3.visible = 'false';
+								$.containerRoom3.width = '0';
+								$.containerRoom3.height = '0';
+								$.containerRoom3_3.visible = 'false';
+								$.containerRoom3_3.width = '0';
+								$.containerRoom3_3.height = '0';
+								
+								break;	
+					case '3':   $.textRoom2.visible = 'true';
+								$.containerRoom2.visible = 'true';
+								$.containerRoom2.width = '90%';
+								$.containerRoom2.height = '50';
+								$.containerRoom2_2.visible = 'true';
+								$.containerRoom2_2.width = '90%';
+								$.containerRoom2_2.height = '50';
+								
+								$.textRoom3.visible = 'true';
+								$.containerRoom3.visible = 'true';
+								$.containerRoom3.width = '90%';
+								$.containerRoom3.height = '50';
+								$.containerRoom3_3.visible = 'true';
+								$.containerRoom3_3.width = '90%';
+								$.containerRoom3_3.height = '50';
+								
+								break;					
+				}	
 		});
 										
 		//Imagen de flecha abajo
@@ -496,7 +582,427 @@ function createComboRooms(){
 }
 
 
+///////////////////////////////////////// CREA EL COMBO PARA LA HABITACIÓN 1
+function createComboRoom1(){
+	
+	if (Ti.Platform.osname == "iphone")
+	{	
+		
+		
+	}
+	else
+	{
+		
+		var picker_data_adults = [];
+		picker_data_adults[0]=Ti.UI.createPickerRow({title:L('text_31')});
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '1', id: '1'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '2', id: '2'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '3', id: '3'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '4', id: '4'}));
+		
+		var picker_data_children = [];
+		picker_data_children[0]=Ti.UI.createPickerRow({title:L('text_32')});
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '0', id: '0'}));
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '1', id: '1'}));
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '2', id: '2'}));
+		
+		var picker_data_childrenAge1 = [];
+		picker_data_childrenAge1[0]=Ti.UI.createPickerRow({title:L('text_33')});
+		var picker_data_childrenAge2 = [];
+		picker_data_childrenAge2[0]=Ti.UI.createPickerRow({title:L('text_34')});
+		for (var i = 0; i<= 14;i++)
+		{
+			picker_data_childrenAge1.push(Titanium.UI.createPickerRow({title: i, id: i}));
+			picker_data_childrenAge2.push(Titanium.UI.createPickerRow({title: i, id: i}));
+		}
+		
 
+		
+		//estilo
+		var pickerStyle = $.createStyle({classes: ['pickerStyle']});
+								
+		var pickerAdult = Titanium.UI.createPicker({});
+		pickerAdult.selectionIndicator=true;
+		pickerAdult.applyProperties(pickerStyle);
+		
+		var pickerChildren = Titanium.UI.createPicker({});
+		pickerChildren.selectionIndicator=true;
+		pickerChildren.applyProperties(pickerStyle);
+		
+		var pickerChildrenAge1 = Titanium.UI.createPicker({});
+		pickerChildrenAge1.selectionIndicator=true;
+		pickerChildrenAge1.applyProperties(pickerStyle);
+		
+		var pickerChildrenAge2 = Titanium.UI.createPicker({});
+		pickerChildrenAge2.selectionIndicator=true;
+		pickerChildrenAge2.applyProperties(pickerStyle);
+										
+		pickerAdult.add(picker_data_adults);
+		pickerChildren.add(picker_data_children);
+		pickerChildrenAge1.add(picker_data_childrenAge1);
+		pickerChildrenAge2.add(picker_data_childrenAge2);
+										
+		pickerAdult.addEventListener('change', function(){
+					
+		});
+		
+		pickerChildren.addEventListener('change', function(){
+			
+				switch (pickerChildren.getSelectedRow(0).id)
+				{
+					case '0': 	$.containerRoom1.visible = 'false';
+								$.containerRoom1.width = 0;
+								$.containerRoom1.height = 0;
+								break;
+					case '1': 	$.containerRoom1.visible = 'true';
+								$.containerRoom1.width = '90%';
+								$.containerRoom1.height = '50';
+								$.comboAge1.visible = 'true';
+								$.comboAge2.visible = 'false';
+								break;	
+					case '2': 	$.containerRoom1.visible = 'true';
+								$.containerRoom1.width = '90%';
+								$.containerRoom1.height = '50';
+								$.comboAge1.visible = 'true';
+								$.comboAge2.visible = 'true';
+								break;					
+				}
+		});
+		
+		pickerChildrenAge1.addEventListener('change', function(){
+					
+		});
+		
+		pickerChildrenAge1.addEventListener('change', function(){
+					
+		});
+										
+		//Imagen de flecha abajo
+		var imagen1  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen2  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen3  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen4  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+	
+	
+		$.comboAdult1.add(pickerAdult);
+		$.comboAdult1.add(imagen1);	
+		$.comboChildren1.add(pickerChildren);
+		$.comboChildren1.add(imagen2);	
+		$.comboAge1.add(pickerChildrenAge1);
+		$.comboAge1.add(imagen3);
+		$.comboAge2.add(pickerChildrenAge2);
+		$.comboAge2.add(imagen4);
+		
+		
+	}
+
+}
+
+
+
+///////////////////////////////////////// CREA EL COMBO PARA LA HABITACIÓN 2
+function createComboRoom2(){
+	
+	if (Ti.Platform.osname == "iphone")
+	{	
+		
+		
+	}
+	else
+	{
+		
+		var picker_data_adults = [];
+		picker_data_adults[0]=Ti.UI.createPickerRow({title:L('text_31')});
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '1', id: '1'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '2', id: '2'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '3', id: '3'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '4', id: '4'}));
+		
+		var picker_data_children = [];
+		picker_data_children[0]=Ti.UI.createPickerRow({title:L('text_32')});
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '0', id: '0'}));
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '1', id: '1'}));
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '2', id: '2'}));
+		
+		var picker_data_childrenAge1 = [];
+		picker_data_childrenAge1[0]=Ti.UI.createPickerRow({title:L('text_33')});
+		var picker_data_childrenAge2 = [];
+		picker_data_childrenAge2[0]=Ti.UI.createPickerRow({title:L('text_34')});
+		for (var i = 0; i<= 14;i++)
+		{
+			picker_data_childrenAge1.push(Titanium.UI.createPickerRow({title: i, id: i}));
+			picker_data_childrenAge2.push(Titanium.UI.createPickerRow({title: i, id: i}));
+		}
+		
+
+		
+		//estilo
+		var pickerStyle = $.createStyle({classes: ['pickerStyle']});
+								
+		var pickerAdult = Titanium.UI.createPicker({});
+		pickerAdult.selectionIndicator=true;
+		pickerAdult.applyProperties(pickerStyle);
+		
+		var pickerChildren = Titanium.UI.createPicker({});
+		pickerChildren.selectionIndicator=true;
+		pickerChildren.applyProperties(pickerStyle);
+		
+		var pickerChildrenAge1 = Titanium.UI.createPicker({});
+		pickerChildrenAge1.selectionIndicator=true;
+		pickerChildrenAge1.applyProperties(pickerStyle);
+		
+		var pickerChildrenAge2 = Titanium.UI.createPicker({});
+		pickerChildrenAge2.selectionIndicator=true;
+		pickerChildrenAge2.applyProperties(pickerStyle);
+										
+		pickerAdult.add(picker_data_adults);
+		pickerChildren.add(picker_data_children);
+		pickerChildrenAge1.add(picker_data_childrenAge1);
+		pickerChildrenAge2.add(picker_data_childrenAge2);
+										
+		pickerAdult.addEventListener('change', function(){
+					
+		});
+		
+		pickerChildren.addEventListener('change', function(){
+			
+				switch (pickerChildren.getSelectedRow(0).id)
+				{
+					case '0': 	$.containerRoom2_2.visible = 'false';
+								$.containerRoom2_2.width = 0;
+								$.containerRoom2_2.height = 0;
+								break;
+					case '1': 	$.containerRoom2_2.visible = 'true';
+								$.containerRoom2_2.width = '90%';
+								$.containerRoom2_2.height = '50';
+								$.comboAge3.visible = 'true';
+								$.comboAge4.visible = 'false';
+								break;	
+					case '2': 	$.containerRoom2_2.visible = 'true';
+								$.containerRoom2_2.width = '90%';
+								$.containerRoom2_2.height = '50';
+								$.comboAge3.visible = 'true';
+								$.comboAge4.visible = 'true';
+								break;					
+				}
+		});
+		
+		pickerChildrenAge1.addEventListener('change', function(){
+					
+		});
+		
+		pickerChildrenAge1.addEventListener('change', function(){
+					
+		});
+										
+		//Imagen de flecha abajo
+		var imagen1  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen2  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen3  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen4  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+	
+	
+		$.comboAdult2.add(pickerAdult);
+		$.comboAdult2.add(imagen1);	
+		$.comboChildren2.add(pickerChildren);
+		$.comboChildren2.add(imagen2);	
+		$.comboAge3.add(pickerChildrenAge1);
+		$.comboAge3.add(imagen3);
+		$.comboAge4.add(pickerChildrenAge2);
+		$.comboAge4.add(imagen4);
+		
+		
+	}
+
+}
+
+
+
+
+///////////////////////////////////////// CREA EL COMBO PARA LA HABITACIÓN 3
+function createComboRoom3(){
+	
+	if (Ti.Platform.osname == "iphone")
+	{	
+		
+		
+	}
+	else
+	{
+		
+		var picker_data_adults = [];
+		picker_data_adults[0]=Ti.UI.createPickerRow({title:L('text_31')});
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '1', id: '1'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '2', id: '2'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '3', id: '3'}));
+		picker_data_adults.push(Titanium.UI.createPickerRow({title: '4', id: '4'}));
+		
+		var picker_data_children = [];
+		picker_data_children[0]=Ti.UI.createPickerRow({title:L('text_32')});
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '0', id: '0'}));
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '1', id: '1'}));
+		picker_data_children.push(Titanium.UI.createPickerRow({title: '2', id: '2'}));
+		
+		var picker_data_childrenAge1 = [];
+		picker_data_childrenAge1[0]=Ti.UI.createPickerRow({title:L('text_33')});
+		var picker_data_childrenAge2 = [];
+		picker_data_childrenAge2[0]=Ti.UI.createPickerRow({title:L('text_34')});
+		for (var i = 0; i<= 14;i++)
+		{
+			picker_data_childrenAge1.push(Titanium.UI.createPickerRow({title: i, id: i}));
+			picker_data_childrenAge2.push(Titanium.UI.createPickerRow({title: i, id: i}));
+		}
+		
+
+		
+		//estilo
+		var pickerStyle = $.createStyle({classes: ['pickerStyle']});
+								
+		var pickerAdult = Titanium.UI.createPicker({});
+		pickerAdult.selectionIndicator=true;
+		pickerAdult.applyProperties(pickerStyle);
+		
+		var pickerChildren = Titanium.UI.createPicker({});
+		pickerChildren.selectionIndicator=true;
+		pickerChildren.applyProperties(pickerStyle);
+		
+		var pickerChildrenAge1 = Titanium.UI.createPicker({});
+		pickerChildrenAge1.selectionIndicator=true;
+		pickerChildrenAge1.applyProperties(pickerStyle);
+		
+		var pickerChildrenAge2 = Titanium.UI.createPicker({});
+		pickerChildrenAge2.selectionIndicator=true;
+		pickerChildrenAge2.applyProperties(pickerStyle);
+										
+		pickerAdult.add(picker_data_adults);
+		pickerChildren.add(picker_data_children);
+		pickerChildrenAge1.add(picker_data_childrenAge1);
+		pickerChildrenAge2.add(picker_data_childrenAge2);
+										
+		pickerAdult.addEventListener('change', function(){
+					
+		});
+		
+		pickerChildren.addEventListener('change', function(){
+			
+				switch (pickerChildren.getSelectedRow(0).id)
+				{
+					case '0': 	$.containerRoom3_3.visible = 'false';
+								$.containerRoom3_3.width = 0;
+								$.containerRoom3_3.height = 0;
+								break;
+					case '1': 	$.containerRoom3_3.visible = 'true';
+								$.containerRoom3_3.width = '90%';
+								$.containerRoom3_3.height = '50';
+								$.comboAge5.visible = 'true';
+								$.comboAge6.visible = 'false';
+								break;	
+					case '2': 	$.containerRoom3_3.visible = 'true';
+								$.containerRoom3_3.width = '90%';
+								$.containerRoom3_3.height = '50';
+								$.comboAge5.visible = 'true';
+								$.comboAge6.visible = 'true';
+								break;					
+				}
+		});
+		
+		pickerChildrenAge1.addEventListener('change', function(){
+					
+		});
+		
+		pickerChildrenAge1.addEventListener('change', function(){
+					
+		});
+										
+		//Imagen de flecha abajo
+		var imagen1  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen2  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen3  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+		
+		var imagen4  = Ti.UI.createImageView({
+						image:  '/images/arrowDown.png',
+						right:  10,
+						width:  15,
+						height: 13
+		});
+	
+	
+		$.comboAdult3.add(pickerAdult);
+		$.comboAdult3.add(imagen1);	
+		$.comboChildren3.add(pickerChildren);
+		$.comboChildren3.add(imagen2);	
+		$.comboAge5.add(pickerChildrenAge1);
+		$.comboAge5.add(imagen3);
+		$.comboAge6.add(pickerChildrenAge2);
+		$.comboAge6.add(imagen4);
+		
+		
+	}
+
+}
 
 
 /* ***********************************************************

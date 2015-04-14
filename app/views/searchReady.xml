@@ -40,15 +40,63 @@
 			<TextArea class="combo" id="comboRooms" platform="ios"  touchEnabled="true"  ></TextArea>
 			<View platform="android" class="combo" id="comboRooms" ></View>
 			
-			<!-- HABITACIÓN 1 -->
-			<Label text="L('text_28')" id="textRoom1" class="headline"></Label>
-			<View class="containerHorizontal" id="containerRoom1">
-				<TextArea class="combo3" id="comboAdult1" platform="ios"  touchEnabled="true"  ></TextArea>
-				<View platform="android" class="combo3" id="comboAdult1" ></View>
+				<!-- HABITACIÓN 1 -->
+				<Label text="L('text_28')" id="textRoom1" class="headline"></Label>
+				<View class="containerHorizontal" id="containerRoom1">
+					<TextArea class="combo3" id="comboAdult1" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo3" id="comboAdult1" ></View>
+					
+					<TextArea class="combo4" id="comboChildren1" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo4" id="comboChildren1" ></View>
+				</View>
+				<!-- edad de los niños -->
+				<View class="containerHorizontal" id="containerRoom1"> 
+					<TextArea class="combo3" id="comboAge1" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo3" id="comboAge1" ></View>
+					
+					<TextArea class="combo4" id="comboAge2" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo4" id="comboAge2" ></View>
+				</View>
 				
-				<TextArea class="combo4" id="comboChildren1" platform="ios"  touchEnabled="true"  ></TextArea>
-				<View platform="android" class="combo4" id="comboChildren1" ></View>
-			</View>
+				
+				<!-- HABITACIÓN 2 -->
+				<Label text="L('text_29')" id="textRoom2" class="headline"></Label>
+				<View class="containerHorizontal" id="containerRoom2">
+					<TextArea class="combo3" id="comboAdult2" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo3" id="comboAdult2" ></View>
+					
+					<TextArea class="combo4" id="comboChildren2" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo4" id="comboChildren2" ></View>
+				</View>
+				<!-- edad de los niños -->
+				<View class="containerHorizontal" id="containerRoom2_2"> 
+					<TextArea class="combo3" id="comboAge3" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo3" id="comboAge3" ></View>
+					
+					<TextArea class="combo4" id="comboAge4" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo4" id="comboAge4" ></View>
+				</View>
+				
+				
+				<!-- HABITACIÓN 3 -->
+				<Label text="L('text_30')" id="textRoom3" class="headline"></Label>
+				<View class="containerHorizontal" id="containerRoom3">
+					<TextArea class="combo3" id="comboAdult3" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo3" id="comboAdult3" ></View>
+					
+					<TextArea class="combo4" id="comboChildren3" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo4" id="comboChildren3" ></View>
+				</View>
+				<!-- edad de los niños -->
+				<View class="containerHorizontal" id="containerRoom3_3"> 
+					<TextArea class="combo3" id="comboAge5" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo3" id="comboAge5" ></View>
+					
+					<TextArea class="combo4" id="comboAge6" platform="ios"  touchEnabled="true"  ></TextArea>
+					<View platform="android" class="combo4" id="comboAge6" ></View>
+				</View>
+			
+			
 			
 			
 				
