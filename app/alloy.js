@@ -55,6 +55,7 @@ var datamodel_Search_countries = [];
 var datamodel_Search_destinySpain = [];
 var datamodel_Search_zonesSpain = [];
 var datamodel_Search_destinies = [];
+var datamodel_Search_hotelsCategories = [];
 
 Alloy.Collections.model_hotels = [];
 

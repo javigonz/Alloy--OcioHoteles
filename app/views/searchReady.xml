@@ -24,6 +24,11 @@
 					<TextField class="combo2" id="comboDestiny" hintText="Elige el destino..."></TextField>
 					<Button class="destiny_button" id="buttonDestiny" title="Buscar" ></Button>
 				</View>
+				
+				
+			<!-- CATEGORÍA -->
+			<TextArea class="combo" id="comboCategory" platform="ios"  touchEnabled="true"  ></TextArea>
+			<View platform="android" class="combo" id="comboCategory" ></View>	
 			
 			
 			<!-- FECHA DE ENTRADA -->	

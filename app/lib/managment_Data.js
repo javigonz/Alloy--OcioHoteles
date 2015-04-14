@@ -290,6 +290,48 @@ exports.LoadWebService_SearchLoadDestinies = function(value_search){
 };
 
 
+
+//************************************************************************************************************************
+//Carga WEBSERVICE de cargar destinos de España
+//************************************************************************************************************************
+exports.LoadWebService_SearchLoadHotelsCategories = function(){
+	
+	var client = Ti.Network.createHTTPClient({
+	     onload : function(e) {
+	     	
+	     		try{
+			         datamodel_Search_hotelsCategories = JSON.parse (this.responseText);
+			         Ti.App.fireEvent('loadSearchHotelsCategories');
+	     		}
+	     		catch (e){
+	     			 Ti.App.fireEvent('closeLoading');
+	     			 managment_View.OpenInfoWindow( L('text_20'));
+	     		}
+	        
+
+	     },
+	     onerror : function(e) {
+	         Ti.App.fireEvent('closeLoading');
+	         managment_View.OpenInfoWindow( L('text_20'));
+	     },
+	     timeout : 5000  // in milliseconds
+ 	});
+ 	
+    client.validatesSecureCertificate = false;
+
+ 	client.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+ 	
+	var dataSend = {
+			 			'method': 'getCategorias'
+			  	   };
+	
+	client.open("POST", url_WebService_Login); 
+	client.send( {data:JSON.stringify(dataSend)});
+	
+};
+
+
+
 //************************************************************************************************************************
 //Carga WEBSERVICE de Agenda
 //************************************************************************************************************************

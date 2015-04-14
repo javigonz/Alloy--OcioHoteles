@@ -87,7 +87,7 @@ function show(){
 	Ti.App.fireEvent('openLoading');
 	Ti.App.addEventListener('loadSearchCountries', createComboCountry);
 	managment_Data.LoadWebService_SearchLoadCountries();
-
+	
 }
 
 ///////////////////////////////////////// CREA EL COMBO PARA PAÍSES
@@ -188,7 +188,10 @@ function createComboCountry(){
 			picker.getSelectedRow(0).id = '28';
 			picker.getSelectedRow(0).title = 'ESPAÑA';
 			picker.fireEvent('change');
+			
 			loadDataDestinySpain();
+			loadDataHotelsCategories();
+			
 			$.comboDestiny.visible = 'false';
 			$.comboDestiny.width = '0';
 			$.comboDestiny.height = '0';
@@ -532,9 +535,7 @@ function createComboRooms(){
 								$.containerRoom2.visible = 'true';
 								$.containerRoom2.width = '90%';
 								$.containerRoom2.height = '50';
-								$.containerRoom2_2.visible = 'true';
-								$.containerRoom2_2.width = '90%';
-								$.containerRoom2_2.height = '50';
+								
 								
 								$.textRoom3.visible = 'false';
 								$.containerRoom3.visible = 'false';
@@ -549,17 +550,13 @@ function createComboRooms(){
 								$.containerRoom2.visible = 'true';
 								$.containerRoom2.width = '90%';
 								$.containerRoom2.height = '50';
-								$.containerRoom2_2.visible = 'true';
-								$.containerRoom2_2.width = '90%';
-								$.containerRoom2_2.height = '50';
+								
 								
 								$.textRoom3.visible = 'true';
 								$.containerRoom3.visible = 'true';
 								$.containerRoom3.width = '90%';
 								$.containerRoom3.height = '50';
-								$.containerRoom3_3.visible = 'true';
-								$.containerRoom3_3.width = '90%';
-								$.containerRoom3_3.height = '50';
+								
 								
 								break;					
 				}	
@@ -1005,6 +1002,70 @@ function createComboRoom3(){
 }
 
 
+
+
+///////////////////////////////////////// CREA EL COMBO DE CATEGORÍAS DE LOS HOTELES
+function createComboHotelsCategories(){
+	
+	Ti.App.removeEventListener('loadSearchHotelsCategories', createComboHotelsCategories);
+
+	if (datamodel_Search_hotelsCategories.result === 'ok')
+	{
+		
+		if (Ti.Platform.osname == "iphone")
+		{	
+			
+			
+		}
+		else
+		{
+			
+			var picker_data = [];
+			picker_data[0]=Ti.UI.createPickerRow({title:L('text_35')});
+			
+			datamodel_Search_hotelsCategories.categorias.forEach(function (element, index, array) {
+				picker_data.push(Titanium.UI.createPickerRow({title: utils.strNormalize(element.nombre), id: element.id}));
+				
+			});
+			
+			//estilo
+			var pickerStyle = $.createStyle({classes: ['pickerStyle']});
+									
+			var picker = Titanium.UI.createPicker({});
+			picker.selectionIndicator=true;
+			picker.applyProperties(pickerStyle);
+											
+			picker.add(picker_data);
+											
+			picker.addEventListener('change', function(){
+			});
+											
+			//Imagen de flecha abajo
+			var imagen1 = Ti.UI.createImageView({
+							image:  '/images/arrowDown.png',
+							right:  10,
+							width:  15,
+							height: 13
+			});
+		
+			$.comboCategory.add(picker);
+			$.comboCategory.add(imagen1);	
+			
+			
+		}
+		
+		
+	}
+	else
+	{
+		managment_View.OpenInfoWindow( L('text_20'));		
+	}
+	
+	Ti.App.fireEvent('closeLoading');
+}
+
+
+
 /* ***********************************************************
  * Handler functions
  * ***********************************************************/
@@ -1019,6 +1080,14 @@ function loadDataDestinySpain(){
 	Ti.App.fireEvent('openLoading');
 	Ti.App.addEventListener('loadSearchDestinySpain', createComboDestinySpain);
 	managment_Data.LoadWebService_SearchLoadDestinySpain();
+	
+}
+
+function loadDataHotelsCategories(){
+	
+	Ti.App.fireEvent('openLoading');
+	Ti.App.addEventListener('loadSearchHotelsCategories', createComboHotelsCategories);
+	managment_Data.LoadWebService_SearchLoadHotelsCategories();
 	
 }
 
